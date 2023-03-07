@@ -4,6 +4,8 @@ const userController=require('../controllers/userController')
 
 
 
-router.get('/',userController.test)
+router.post('/doctors/register',userController.registerDoc)
+router.post('/patients/register',userController.registerPatient)
+router.post('/patients/:id/create_report',userController.createReport)
 
 module.exports=router
